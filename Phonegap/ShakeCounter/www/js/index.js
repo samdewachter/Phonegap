@@ -48,10 +48,13 @@ var app = {
     }
 };
 
+var counter = 0;
+
 var shakeEvent = new Shake({threshold: 15});
     shakeEvent.start();
     window.addEventListener('shake', function(){
-        alert("Shaked");
+        counter += 1;
+        document.getElementById("counter").innerHTML = counter;
     }, false);
 
     //stop listening
