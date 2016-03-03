@@ -48,19 +48,17 @@ var app = {
     }
 };
 
-var counter = 0;
+console.log("test1");
 
-var shakeEvent = new Shake({threshold: 15});
-    shakeEvent.start();
-    window.addEventListener('shake', function(){
-        counter += 1;
-        document.getElementById("counter").innerHTML = counter;
-    }, false);
+function toggleClass(){
 
-    //stop listening
-    function stopShake(){
-        shakeEvent.stop();
+    if ( document.getElementById("change").className == "normal" ) {
+         document.getElementById("change").className = "bold"
     }
+    else {
+        document.getElementById("change").className = "normal";
+    }
+    
 
-    //check if shake is supported or not.
-    if(!("ondevicemotion" in window)){alert("Not Supported");}
+    console.log("test2");
+}
